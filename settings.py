@@ -1,0 +1,33 @@
+import json
+
+REDIS_HOST = "192.168.229.128"
+REDIS_PORT = 6379
+#代理队列名字
+PROXY_HTTP_LIST_NAME = "Proxy_HTTP"
+PROXY_HTTPS_LIST_NAME = "Proxy_HTTPS"
+#验证线程数量
+MAX_VALI_THREADS = 128
+#验证队列长度
+MAX_VALI_LIST = 10
+#单个代理获取延迟
+SINGLE_PROXY_DELAY = 1
+
+#最大进程数
+MAX_PROCESS = 10
+#单进程最大线程数
+MAX_THREAD = 32
+
+END_UID = 10000000
+
+#下载请求生成延迟和最大待处理队列长度。
+REQUEST_BUILD_DELAY = 0.05
+MAX_PENDING = 500
+
+#插入缓存
+INSERT_CACHE = 1
+
+with open("DataBaseSettings.ini","r") as fp:
+    sqlsetting = json.loads(fp.read())["default"]\
+
+COOKIE = "buvid3=E7F47EB1-CAE0-4EC7-AACA-D9380C24D7F877410infoc; LIVE_BUVID=AUTO8315504102832081; sid=6icce4il; CURRENT_FNVAL=16; rpdid=iqmxisksqidosswpioxww; fts=1550764054; _uuid=9DCD67C5-A199-2DDA-BBDC-2AB8F0EFB30D84063infoc; UM_distinctid=1691e876c48261-0c0d26d7c59d48-3d644701-144000-1691e876c493b5; stardustvideo=-1; Hm_lvt_8a6e55dbd2870f0f5bc9194cddf32a02=1552476162; CURRENT_QUALITY=80; _dfcaptcha=a970f40e9c82385b860f55b46ca2c8d3; bp_t_offset_3036487=230814991345927758; CNZZDATA2724999=cnzz_eid%3D1518731675-1550991817-https%253A%252F%252Fwww.bilibili.com%252F%26ntime%3D1552583012; DedeUserID=3036487; DedeUserID__ckMd5=3bdd53f19a9f7b02; SESSDATA=07e688a9%2C1555176807%2C0639ce31; bili_jct=93b56089d5c988026eb7e5c5936de92d"
+DATAFILE_PATH = "./save.dat"
